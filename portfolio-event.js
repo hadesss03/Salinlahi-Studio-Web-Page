@@ -18,8 +18,8 @@ const THRESHOLD = window.innerHeight * 0.5;
 
 // ===== IMAGE DATA =====
 const imageGroups = {
-    gtech: { images: ['Event Coverage/EC - GTECH (1).jpg','Event Coverage/EC - GTECH (2).jpg','Event Coverage/EC - GTECH (3).jpg','Event Coverage/EC - GTECH (4).jpg'], title: 'Google - Tech Summit', location: 'IRTC, TUP Manila', link: 'https://www.facebook.com/share/p/14QLXcZYXoU/', infoClass: 'gtech' },
-    hawk: { images: ['Event Coverage/EC - Hawk-A-Thon (1).jpg','Event Coverage/EC - Hawk-A-Thon (2).jpg','Event Coverage/EC - Hawk-A-Thon (3).jpg','Event Coverage/EC - Hawk-A-Thon (4).jpg'], title: 'UI/UX - Hawk-A-Thon', location: 'TUP Manila', link: 'https://www.facebook.com/share/p/17C1u9Gj9z/', infoClass: 'hawk' },
+    gtech: { images: ['Event Coverage/EC - GTECH (1).JPG','Event Coverage/EC - GTECH (2).JPG','Event Coverage/EC - GTECH (3).JPG','Event Coverage/EC - GTECH (4).JPG'], title: 'Google - Tech Summit', location: 'IRTC, TUP Manila', link: 'https://www.facebook.com/share/p/14QLXcZYXoU/', infoClass: 'gtech' },
+    hawk: { images: ['Event Coverage/EC - Hawk-A-Thon (1).JPG','Event Coverage/EC - Hawk-A-Thon (2).JPG','Event Coverage/EC - Hawk-A-Thon (3).JPG','Event Coverage/EC - Hawk-A-Thon (4).JPG'], title: 'UI/UX - Hawk-A-Thon', location: 'TUP Manila', link: 'https://www.facebook.com/share/p/17C1u9Gj9z/', infoClass: 'hawk' },
     pasik: { images: ['Event Coverage/EC - Pasiklaban (1).jpg','Event Coverage/EC - Pasiklaban (2).jpg','Event Coverage/EC - Pasiklaban (3).jpg','Event Coverage/EC - Pasiklaban (4).jpg'], title: 'TUP 3rd Pasiklaban ', location: 'TUP Manila', link: 'https://www.facebook.com/share/p/17ZqQdwHoL/', infoClass: 'pasik' },
     hayo: { images: ['Event Coverage/EC - TUP Hayo (1).jpg','Event Coverage/EC - TUP Hayo (2).jpg','Event Coverage/EC - TUP Hayo (3).jpg','Event Coverage/EC - TUP Hayo (4).jpg'], title: 'TUP Hayò', location: 'TUP Manila', link: 'https://www.facebook.com/share/p/16LntKfkVJ/', infoClass: 'hayo' },
     smileglad: {
