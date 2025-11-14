@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salinlahi Studio - Event Coverage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Cormorant+Unicase:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-portfolio-event.css">
+    <link rel="stylesheet" href="style-footer.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <img src="logo.png" alt="Logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <!-- TITLE -->
+    <h1 class="event-title">Event Coverage</h1>
+
+    <!-- CONTENT -->
+    <div class="content-container">
+        <!-- ROW 1 - TOP -->
+        <div class="event-row">
+            <div class="event-img-wrapper" data-key="gtech">
+                <img src="Event Coverage/EC - GTECH (1).jpg" alt="Google - Tech Summit">
+                <div class="hover-info">Google - Tech Summit<br><small>IRTC, TUP Manila</small></div>
+            </div>
+            <div class="event-img-wrapper" data-key="hawk">
+                <img src="Event Coverage/EC - Hawk-A-Thon (1).jpg" alt="UI/UX - Hawk-A-Thon">
+                <div class="hover-info">UI/UX - Hawk-A-Thon<br><small>TUP Manila</small></div>
+            </div>
+        </div>
+
+        <!-- ROW 2 - MIDDLE -->
+        <div class="event-row">
+            <div class="event-img-wrapper" data-key="pasik">
+                <img src="Event Coverage/EC - Pasiklaban (1).jpg" alt="TUP Hayò">
+                <div class="hover-info">TUP 3rd Pasiklaban<br><small>TUP Manila</small></div>
+            </div>
+            <div class="event-img-wrapper" data-key="hayo">
+                <img src="Event Coverage/EC - TUP Hayo (1).jpg" alt="TUP Hayo">
+                <div class="hover-info">TUP Hayò<br><small>TUP Manila</small></div>
+            </div>
+        </div>
+
+        <!-- ROW 3 - BIRTHDAY PARTY (SAME GAP AS ROW 1 → ROW 2) -->
+        <div class="event-row" style="justify-content: center; margin-top: 2rem;">
+            <div class="event-img-wrapper" data-key="smileglad">
+                <img src="Event Coverage/EC - Smile and Glad Birthday Party  (1).jpg" alt="Maiden Smile and Jden Glad Birthday Party">
+                <div class="hover-info">Maiden Smile and Jden Glad Birthday Party<br><small>Shakey’s MCU, Caloocan</small></div>
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+    </div>
+
+    <!-- CAROUSEL OVERLAY -->
+    <div class="carousel-overlay hidden">
+        <div class="carousel-image-wrapper">
+            <img src="" alt="">
+        </div>
+        <button class="carousel-btn left-btn">&lt;</button>
+        <button class="carousel-btn right-btn">&gt;</button>
+        <p class="carousel-info"></p>
+        <a class="view-btn" href="#" target="_blank" rel="noopener noreferrer">View on Facebook</a>
+        <button class="close-btn" aria-label="Close">X</button>
+    </div>
+
+    <!-- VIDEO BG -->
+    <video autoplay muted loop id="bg-video">
+        <source src="Video BG.mp4" type="video/mp4">
+    </video>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="assets/logo.png" alt="Salinlahi Studio">
+        </div>
+        <div class="copyright">© 2025 Salinlahi Studio</div>
+
+        <div class="follow-text">Follow us on:</div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/salinlahi.studio/" class="btn fb" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><img src="assets/facebook.png" alt="FB"></div>
+                <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/salinlahi.studio/" class="btn ig" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><img src="assets/instagram.png" alt="IG"></div>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@salinlahi.studio" class="btn tt" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><img src="assets/tiktok.png" alt="TT"></div>
+                <span>Tiktok</span>
+            </a>
+            <a href="https://www.youtube.com/@salinlahi.studio" class="btn yt" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><img src="assets/youtube.png" alt="YT"></div>
+                <span>Youtube</span>
+            </a>
+        </div>
+
+        <div class="powered-by">Powered by</div>
+        <div class="vercel-logo">
+            <img src="assets/vercel.png" alt="Vercel">
+        </div>
+    </footer>
+
+    <script src="portfolio-event.js"></script>
+</body>
+</html>

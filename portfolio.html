@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Salinlahi Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Cormorant+Unicase:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS Files - INCLUDE ALL -->
+  <link rel="stylesheet" href="style.css">           <!-- Nav + General -->
+  <link rel="stylesheet" href="style-footer.css">   <!-- Footer -->
+  <link rel="stylesheet" href="style-portfolio.css"> <!-- Portfolio-specific -->
+</head>
+<body>
+
+  <!-- ===== Navigation Bar ===== -->
+    <nav>
+      <img src="logo.png" alt="Logo">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contacts.html">Contacts</a></li>
+      </ul>
+    </nav>
+
+  <!-- ===== Portfolio Section ===== -->
+  <section class="portfolio-section">
+    <h1 class="portfolio-title">Portfolio</h1>
+
+    <div class="carousel">
+      <button class="arrow left">&#10094;</button>
+
+      <div class="slides">
+        <!-- ===== Event Coverage ===== -->
+        <div class="slide active" id="event">
+          <img src="Portfolio Tab/Portfolio - Event.jpg" alt="Event Background" class="bg">
+          <div class="cards">
+            <img src="Portfolio Tab/Card - Event.png" alt="Event Card" class="main-card">
+            <img src="Portfolio Tab/Card - Video.png" alt="Video Card" class="side-card">
+          </div>
+          <div class="text">
+            <h2>Event Coverage</h2>
+            <p>Capturing the energy & genuine moments of your events. We deliver comprehensive, professional narratives that bring your experience back to life. Every key moment, documented with artistic precision.</p>
+            <a href="portfolio-event.html" class="cta">Explore Now →</a>
+          </div>
+        </div>
+
+        <!-- ===== Portraits ===== -->
+        <div class="slide" id="portraits">
+          <img src="Portfolio Tab/Portfolio - Portrait.jpg" alt="Portrait Background" class="bg">
+          <div class="cards">
+            <img src="Portfolio Tab/Card - Portrait.png" alt="Portrait Card" class="main-card">
+            <img src="Portfolio Tab/Card - Event.png" alt="Event Card" class="side-card">
+          </div>
+          <div class="text">
+            <h2>Portraits</h2>
+            <p>Timeless, evocative images that tell your personal story. Focusing on authentic emotion and distinct style to genuinely reveal your unique personality and spirit.</p>
+            <a href="portfolio-portraits.html" class="cta">Explore Now →</a>
+          </div>
+        </div>
+
+        <!-- ===== Nature Photography ===== -->
+        <div class="slide" id="nature">
+          <img src="Portfolio Tab/Portfolio - Nature.jpg" alt="Nature Background" class="bg">
+          <div class="cards">
+            <img src="Portfolio Tab/Card - Nature.png" alt="Nature Card" class="main-card">
+            <img src="Portfolio Tab/Card - Portrait.png" alt="Portrait Card" class="side-card">
+          </div>
+          <div class="text">
+            <h2>Nature Photography</h2>
+            <p>A deep, immersive exploration of the natural world. Stunning landscapes, wildlife, and macro shots. Capturing the awe-inspiring grandeur of the environment with dramatic composition.</p>
+            <a href="portfolio-nature.html" class="cta">Explore Now →</a>
+          </div>
+        </div>
+
+        <!-- ===== Video Coverage ===== -->
+        <div class="slide" id="video">
+          <img src="Portfolio Tab/Portfolio - Video.png" alt="Video Background" class="bg">
+          <div class="cards">
+            <img src="Portfolio Tab/Card - Video.png" alt="Video Card" class="main-card">
+            <img src="Portfolio Tab/Card - Nature.png" alt="Nature Card" class="side-card">
+          </div>
+          <div class="text">
+            <h2>Video Coverage</h2>
+            <p>A visual narrative crafted with cinematic quality. Stunning sequences, aerial views, and polished editing bring your story to life. We deliver high-definition footage with dynamic flow and professional-grade audio.</p>
+            <a href="portfolio-video.html" class="cta">Explore Now →</a>
+          </div>
+        </div>
+      </div>
+
+      <button class="arrow right">&#10095;</button>
+    </div>
+
+    <!-- Carousel Dots -->
+    <div class="dots">
+      <span class="dot active" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+    </div>
+  </section>
+
+  <!-- Animated Footer -->
+<footer>
+        <div class="footer-logo">
+            <img src="assets/logo.png" alt="Salinlahi Studio">
+        </div>
+        <div class="copyright">© 2025 Salinlahi Studio</div>
+
+        <div class="follow-text">Follow us on:</div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/salinlahi.studio/" class="btn fb" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><img src="assets/facebook.png" alt="FB"></div>
+                <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/salinlahi.studio/" class="btn ig" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><img src="assets/instagram.png" alt="IG"></div>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@salinlahi.studio" class="btn tt" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><img src="assets/tiktok.png" alt="TT"></div>
+                <span>Tiktok</span>
+            </a>
+            <a href="https://www.youtube.com/@salinlahi.studio" class="btn yt" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><img src="assets/youtube.png" alt="YT"></div>
+                <span>Youtube</span>
+            </a>
+        </div>
+
+        <div class="powered-by">Powered by</div>
+        <div class="vercel-logo">
+            <img src="assets/vercel.png" alt="Vercel">
+        </div>
+    </footer>
+
+  <script src="portfolio.js"></script>
+</body>
+</html>

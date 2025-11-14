@@ -1,0 +1,253 @@
+/* ===== Global Settings ===== */
+/* Use same base font as home */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cormorant Garamond', serif;
+  color: #FFFFFF;
+  overflow: hidden;
+  height: 100vh;
+  background: #000; /* fallback */
+}
+
+/* ===== Required Rule ===== */
+p {
+  width: 100px;
+  padding: 10px;
+  border: 10px solid black;
+  margin: 10px;
+}
+
+.nav-visible { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+.nav-hidden { opacity: 0; transform: translateX(-50%) translateY(-110%); pointer-events: none; }
+
+/* ===== Portfolio Section ===== */
+.portfolio-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full browser height */
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Slide Styling ===== */
+.slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 5;
+}
+
+/* ===== Full Background Image ===== */
+.slide .bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(70%);
+}
+
+/* ===== Title ===== */
+.portfolio-title {
+  font-family: 'Cormorant Unicase', serif;
+  font-size: 65px;
+  color: #ffffff;
+  position: absolute;
+  top: 90px;
+  left: 800px;
+  transform: translateX(-50%);
+  z-index: 10;
+  letter-spacing: 1px;
+}
+
+/* ===== Cards ===== */
+.cards {
+  position: relative;
+  z-index: 6;
+}
+
+.cards img {
+  border-radius: 40px; /* match corner radius */
+  border: 1px solid #fff;
+}
+
+/* Left (side) card - positioned exactly per spec */
+.side-card {
+  position: absolute;
+  left: 112px; /* x */
+  top: 253px;  /* y */
+  width: 286px;
+  height: 315px;
+  border-radius: 40px;
+  opacity: 0.8;
+  z-index: 15;
+}
+
+/* Right (main) card - positioned exactly per spec */
+.main-card {
+  position: absolute;
+  left: 417px; /* x */
+  top: 190px;  /* y */
+  width: 382px;
+  height: 421px;
+  border-radius: 40px;
+  border: 1px solid #FFFFFF; /* stroke color & weight */
+  z-index: 16;
+}
+
+/* ===== Animations: card swap, text flip, CTA glow ===== */
+.main-card, .side-card {
+  transition: transform 600ms cubic-bezier(.22,.9,.3,1), opacity 400ms ease;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+.slide.anim-next .side-card {
+  transform: translateX(305px) translateY(-53px); 
+  z-index: 18;
+}
+.slide.anim-next .main-card {
+  transform: translateX(-305px) translateY(53px) scale(0.98);
+  opacity: 0.95;
+}
+
+.slide.anim-prev .main-card {
+  transform: translateX(-305px) translateY(53px);
+  z-index: 18;
+}
+.slide.anim-prev .side-card {
+  transform: translateX(305px) translateY(-53px) scale(0.98);
+  opacity: 0.95;
+}
+
+@keyframes flipUp {
+  0% { transform: rotateX(80deg); opacity: 0; }
+  60% { transform: rotateX(-12deg); opacity: 1; }
+  100% { transform: rotateX(0deg); opacity: 1; }
+}
+.text h2 {
+  display: inline-block;
+  transform-origin: bottom;
+}
+.text h2.flip-up {
+  animation: flipUp 600ms cubic-bezier(.22,.9,.3,1);
+}
+
+/* CTA color transition and glow on hover */
+.cta {
+  transition: background-color 400ms ease, box-shadow 250ms ease, transform 120ms ease;
+}
+.cta:hover {
+  box-shadow: 0 0 24px rgba(255,255,255,0.95);
+  transform: translateY(-2px);
+}
+
+/* ensure disabled buttons look inert while animating */
+.arrow[disabled] {
+  opacity: 0.4;
+  cursor: default;
+}
+
+/* ===== Text and CTA ===== */
+.text {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%);
+  width: 480px;
+  text-align: right;
+  color: #ffffff;
+  z-index: 10;
+}
+
+.text h2 {
+  font-family: 'Cormorant Unicase', serif;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+.text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  border: none;
+  width: auto;
+}
+
+.cta {
+  display: inline-block;
+  background: #D2B984;
+  color: #000;
+  text-decoration: none;
+  font-family: 'Bitter', serif;
+  font-weight: 600;
+  font-size: 32px;
+  padding: 10px 25px;
+  border-radius: 24px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta:hover {
+  background: #fcd988;
+  transform: scale(1.05);
+}
+
+/* ===== Arrows ===== */
+.arrow {
+  position: absolute;
+  font-size: 50px;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrow:hover {
+  color: #D2B984;
+}
+
+.arrow.left { left: 28px; top: 380px; width: 61px; height: 61px; }
+.arrow.right { left: 822px; top: 380px; width: 61px; height: 61px; }
+
+/* ===== Dots ===== */
+.dots {
+  position: absolute;
+  left: 670px; /* x */
+  top: 650px;  /* y */
+  display: flex;
+  gap: 19px;
+  z-index: 20;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.dot.active {
+  opacity: 1;
+}
+

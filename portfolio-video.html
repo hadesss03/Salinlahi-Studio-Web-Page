@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salinlahi Studio - Video Coverage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Cormorant+Unicase:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-footer.css">
+    <link rel="stylesheet" href="style-portfolio-video.css">
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <img src="logo.png" alt="Logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contacts.html">Contacts</a></li>
+        </ul>
+    </nav>
+
+    <!-- TITLE -->
+    <h1 class="video-title">Video Coverage</h1>
+
+    <!-- Z-STACK PROGRESSIVE CONTAINER -->
+    <div class="content-container">
+        <!-- ROW 1 -->
+        <div class="video-row" data-depth="0">
+            <div class="video-card" data-key="gtech">
+                <img src="Video/Thumbnail-GTech.png" alt="G-Tech Summit">
+                <div class="hover-info">G-Tech Summit<br><small>TUP IRTC, TUP Manila</small></div>
+            </div>
+            <div class="video-card" data-key="hawk">
+                <img src="Video/Thumbnail-Hawk-A-Thon.png" alt="UI/UX Hawk-A-Thon">
+                <div class="hover-info">UI/UX Hawk-A-Thon<br><small>TUP Manila</small></div>
+            </div>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="video-row" data-depth="1">
+            <div class="video-card" data-key="multo">
+                <img src="Video/Thumbnail-Multo.png" alt="Multo">
+                <div class="hover-info">Multo<br><small>Baguio, Philippines</small></div>
+            </div>
+            <div class="video-card" data-key="ako">
+                <img src="Video/Thumbnail-Ako.png" alt="Ako Naman Muna">
+                <div class="hover-info">Ako Naman Muna - Angela Ken<br><small>Arayat, Pampanga</small></div>
+            </div>
+        </div>
+
+        <!-- ROW 3 -->
+        <div class="video-row" data-depth="2">
+            <div class="video-card" data-key="pasik">
+                <img src="Video/Thumbnail-Pasiklaban.png" alt="3rd Pasiklaban">
+                <div class="hover-info">3rd Pasiklaban<br><small>TUP Manila</small></div>
+            </div>
+            <div class="video-card" data-key="cj">
+                <img src="Video/Thumbnail-CJ.png" alt="Christian Jyreh’s Graduation">
+                <div class="hover-info">Christian Jyreh’s Graduation<br><small>UST, Sampaloc, Manila</small></div>
+            </div>
+        </div>
+
+        <!-- ROW 4 -->
+        <div class="video-row" data-depth="3">
+            <div class="video-card" data-key="scott">
+                <img src="Video/Thumbnail-Scott Street 1.png" alt="Scott Street">
+                <div class="hover-info">Scott Street - Phoebe Bridgers<br><small>Cabiao, Nueva Ecija</small></div>
+            </div>
+            <div class="video-card" data-key="hayo">
+                <img src="Video/Thumbnail-Hayo.png" alt="TUP Hayò">
+                <div class="hover-info">TUP Hayò<br><small>TUP Manila</small></div>
+            </div>
+        </div>
+
+        <!-- ROW 5 (FINAL) -->
+        <div class="video-row" data-depth="4">
+            <div class="video-card" data-key="aws">
+                <img src="Video/Thumbnail-AWS.png" alt="AWSLC x Salinlahi">
+                <div class="hover-info">AWSLC TUP Manila x Salinlahi Studio<br><small>TUP Manila</small></div>
+            </div>
+            <div class="video-card" data-key="birthday">
+                <img src="Video/Thumbnail-Smile and Glad Birthday Party.png" alt="Birthday Party">
+                <div class="hover-info">Maiden Smile and Jden Glad Birthday Party<br><small>Shakey’s MCU, Caloocan</small></div>
+            </div>
+        </div>
+
+        <div class="spacer"></div>
+    </div>
+
+    <!-- BG VIDEO -->
+    <video autoplay muted loop id="bg-video">
+        <source src="Video BG.mp4" type="video/mp4">
+    </video>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="assets/logo.png" alt="Salinlahi Studio">
+        </div>
+        <div class="copyright">© 2025 Salinlahi Studio</div>
+
+        <div class="follow-text">Follow us on:</div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/salinlahi.studio/" class="btn fb" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><img src="assets/facebook.png" alt="FB"></div>
+                <span>Facebook</span>
+            </a>
+            <a href="https://www.instagram.com/salinlahi.studio/" class="btn ig" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><img src="assets/instagram.png" alt="IG"></div>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.tiktok.com/@salinlahi.studio" class="btn tt" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><img src="assets/tiktok.png" alt="TT"></div>
+                <span>Tiktok</span>
+            </a>
+            <a href="https://www.youtube.com/@salinlahi.studio" class="btn yt" target="_blank" rel="noopener noreferrer">
+                <div class="icon"><img src="assets/youtube.png" alt="YT"></div>
+                <span>Youtube</span>
+            </a>
+        </div>
+
+        <div class="powered-by">Powered by</div>
+        <div class="vercel-logo">
+            <img src="assets/vercel.png" alt="Vercel">
+        </div>
+    </footer>
+
+    <script src="portfolio-video.js"></script>
+</body>
+</html>

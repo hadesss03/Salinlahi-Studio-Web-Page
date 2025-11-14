@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacts - Salinlahi Studio</title>
+  <link rel="stylesheet" href="style-contacts.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Cormorant+Garamond:wght@500;600&family=Cormorant+Unicase:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <video autoplay loop muted id="background-video">
+    <source src="Video BG.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <nav class="nav-visible">
+    <img src="logo.png" alt="Logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contacts.html" class="active">Contacts</a></li>
+    </ul>
+  </nav>
+
+  <div class="contacts-container">
+
+    <h1 class="contacts-title">Contacts</h1>
+
+    <div class="contact-card glass-card">
+      <div class="inquire-text">
+        <div class="inquire">Inquire</div>
+        <div class="now">NOW!</div>
+      </div>
+      <p class="address">Malate, Manila City</p>
+
+      <div class="contact-info">
+        <div class="contact-item">
+          <img src="contact_button/phone.png" alt="Phone">
+          <a href="tel:+639102415047">+639102415047</a>
+        </div>
+
+        <div class="contact-item">
+          <img src="contact_button/gmail.png" alt="Email">
+          <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=salinlahistudio@gmail.com&su=&body=" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onclick="event.preventDefault(); window.open(this.href, '_blank'); 
+                      setTimeout(() => { window.open('mailto:salinlahistudio@gmail.com', '_blank'); }, 300);">
+            salinlahistudio@gmail.com
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <img src="contact_button/facebook.png" alt="Facebook">
+          <a href="https://www.facebook.com/salinlahi.studio/" target="_blank">Salinlahi Studio</a>
+        </div>
+
+        <div class="contact-item">
+          <img src="contact_button/instagram.png" alt="Instagram">
+          <a href="https://www.instagram.com/salinlahi.studio/" target="_blank">@salinlahi.studio</a>
+        </div>
+
+        <div class="contact-item">
+          <img src="contact_button/tiktok.png" alt="TikTok">
+          <a href="https://www.tiktok.com/@salinlahi.studio" target="_blank">@salinlahi.studio</a>
+        </div>
+
+        <div class="contact-item">
+          <img src="contact_button/linkedin.png" alt="LinkedIn">
+          <a href="https://www.linkedin.com/in/josh-j-pantalunan/" target="_blank">Josh J. Pantalunan</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  (function(){
+    const nav = document.querySelector('nav');
+    if(!nav) return;
+    nav.classList.add('nav-visible');
+
+    function getHotzone(){
+      return Math.round(window.innerHeight * 0.3);
+    }
+
+    let HOTZONE_PX = getHotzone();
+    window.addEventListener('resize', () => { HOTZONE_PX = getHotzone(); });
+
+    function handlePointer(e){
+      const y = (e.clientY !== undefined) ? e.clientY : (e.touches?.[0]?.clientY) || 9999;
+      if(y <= HOTZONE_PX){
+        nav.classList.remove('nav-hidden');
+        nav.classList.add('nav-visible');
+      } else {
+        nav.classList.remove('nav-visible');
+        nav.classList.add('nav-hidden');
+      }
+    }
+
+    document.addEventListener('mousemove', handlePointer);
+    document.addEventListener('touchstart', handlePointer, {passive: true});
+    document.addEventListener('touchmove', handlePointer, {passive: true});
+  })();
+</script>
+</html>
