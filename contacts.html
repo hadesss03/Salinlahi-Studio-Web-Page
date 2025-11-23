@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacts - Salinlahi Studio</title>
+  <link rel="stylesheet" href="style-contacts.css" />
+  <link rel="stylesheet" href="style-footer.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@700&family=Cormorant+Garamond:wght@500;600&family=Cormorant+Unicase:wght@700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo main.png">
+</head>
+<body>
+
+  <video autoplay loop muted id="background-video">
+    <source src="Video BG.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <nav class="nav-visible">
+    <img src="logo.png" alt="Logo">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="service-package.html">Service &amp; Package</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contacts.html" class="active">Contacts</a></li>
+    </ul>
+  </nav>
+
+  <div class="contacts-container">
+
+    <h1 class="contacts-title">Contacts</h1>
+
+    <div class="contact-card glass-card">
+
+      <div class="contact-grid">
+        <div class="contact-col contact-left">
+          <div class="inquire-text">
+            <div class="inquire">Inquire</div>
+            <div class="now">NOW!</div>
+          </div>
+          <p class="address">Malate, Manila City</p>
+
+          <div class="left-socials social-icons">
+            <a href="tel:+639102415047" class="btn phone" aria-label="Phone">
+              <div class="icon"><img src="assets/phone.png" alt="Phone"></div>
+              <span>Phone</span>
+            </a>
+
+            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=salinlahistudio@gmail.com&su=&body="
+               class="btn email"
+               aria-label="Email"
+               target="_blank"s
+               rel="noopener noreferrer"
+               onclick="event.preventDefault(); window.open(this.href, '_blank'); setTimeout(() => { window.open('mailto:salinlahistudio@gmail.com', '_blank'); }, 300);">
+              <div class="icon"><img src="assets/gmail.png" alt="Email"></div>
+              <span>Email</span>
+            </a>
+
+            <a href="https://www.facebook.com/salinlahi.studio/" class="btn fb" target="_blank" rel="noopener noreferrer">
+              <div class="icon"><img src="assets/facebook.png" alt="FB"></div>
+              <span>Facebook</span>
+            </a>
+
+            <a href="https://www.instagram.com/salinlahi.studio/" class="btn ig" target="_blank" rel="noopener noreferrer">
+              <div class="icon"><img src="assets/instagram.png" alt="IG"></div>
+              <span>Instagram</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/josh-j-pantalunan/" class="btn linkedin" target="_blank" rel="noopener noreferrer">
+              <div class="icon"><img src="assets/linkedin.png" alt="LinkedIn"></div>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-col contact-right">
+            <div class="follow">Follow</div>
+            <div class="us">US ON:</div>
+            
+            <div class="social-icons">
+                <a href="https://www.facebook.com/salinlahi.studio/" class="btn fb" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><img src="assets/facebook.png" alt="FB"></div>
+                    <span>Facebook</span>
+                </a>
+                <a href="https://www.instagram.com/salinlahi.studio/" class="btn ig" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><img src="assets/instagram.png" alt="IG"></div>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.tiktok.com/@salinlahi.studio" class="btn tt" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><img src="assets/tiktok.png" alt="TT"></div>
+                    <span>Tiktok</span>
+                </a>
+                <a href="https://www.youtube.com/@salinlahi.studio" class="btn yt" target="_blank" rel="noopener noreferrer">
+                    <div class="icon"><img src="assets/youtube.png" alt="YT"></div>
+                    <span>Youtube</span>
+                </a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+<script>
+  (function(){
+    const nav = document.querySelector('nav');
+    if(!nav) return;
+    nav.classList.add('nav-visible');
+
+    function getHotzone(){
+      return Math.round(window.innerHeight * 0.3);
+    }
+
+    let HOTZONE_PX = getHotzone();
+    window.addEventListener('resize', () => { HOTZONE_PX = getHotzone(); });
+
+    function handlePointer(e){
+      const y = (e.clientY !== undefined) ? e.clientY : (e.touches?.[0]?.clientY) || 9999;
+      if(y <= HOTZONE_PX){
+        nav.classList.remove('nav-hidden');
+        nav.classList.add('nav-visible');
+      } else {
+        nav.classList.remove('nav-visible');
+        nav.classList.add('nav-hidden');
+      }
+    }
+
+    document.addEventListener('mousemove', handlePointer);
+    document.addEventListener('touchstart', handlePointer, {passive: true});
+    document.addEventListener('touchmove', handlePointer, {passive: true});
+  })();
+</script>
+</html>

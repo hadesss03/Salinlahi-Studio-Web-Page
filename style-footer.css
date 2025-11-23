@@ -1,0 +1,216 @@
+/* footer.css - FINAL PERFECTION: 118px hover, icons visible, pixel-perfect + SMOOTH REVEAL */
+footer {
+    position: fixed;
+    left: 167px;
+    bottom: 40px;
+    width: 1200px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    z-index: 9999;
+    font-family: 'Cormorant Garamond', serif;
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Footer visibility states */
+footer.hidden-footer {
+    opacity: 0;
+    transform: translateY(100px);
+    pointer-events: none;
+}
+
+footer.visible-footer {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.footer-logo img {
+    width: 150px; height: 30px;
+    position: absolute; left: 85px; top: 13px;
+}
+
+.copyright {
+    position: absolute; left: 56px; top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px; color: #FFFFFF;
+}
+
+.follow-text {
+    position: absolute; left: 390px; top: 20px;
+    font-size: 24px; color: #FFFFFF;
+}
+
+.social-icons {
+    position: absolute;
+    left: 520px;
+    top: 13px;
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons .btn {
+    display: inline-block;
+    height: 44px;
+    width: 44px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+}
+
+/* EXACT WIDTHS ON HOVER - AS YOU REQUESTED */
+.social-icons .btn.fb:hover,
+.social-icons .btn.tt:hover,
+.social-icons .btn.yt:hover {
+    width: 128px !important;
+}
+
+.social-icons .btn.ig:hover {
+    width: 136px !important;
+}
+
+.social-icons .btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.social-icons .btn .icon {
+    height: 44px;
+    width: 44px;
+    border-radius: 50px;
+    line-height: 44px;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.4s ease;
+}
+
+.social-icons .btn .icon img {
+    width: 28px;
+    height: 28px;
+    margin-top: 8px;
+    filter: none !important;           /* ICONS NOW ALWAYS VISIBLE */
+    opacity: 0.9;
+    transition: all 0.4s ease;
+    image-rendering: -webkit-optimize-contrast;
+}
+
+.social-icons .btn:hover .icon img {
+    filter: brightness(0) invert(1) !important;  /* White only on hover */
+    opacity: 1;
+    transform: scale(1.15);
+}
+
+.social-icons .btn span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 44px;
+    margin-left: 45px;
+    width: 130px;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 0.45s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.social-icons .btn:hover span {
+    opacity: 1;
+    transform: translateX(0);
+    width: 130px;
+}
+
+/* BRAND COLORS ON HOVER */
+.social-icons .btn.fb:hover .icon { background: #1877F2; }
+.social-icons .btn.ig:hover .icon { background: linear-gradient(135deg, #515BD4, #8134AF, #FF0050, #FFDC80); }
+.social-icons .btn.tt:hover .icon { background: #000000; }
+.social-icons .btn.yt:hover .icon { background: #FF0000; }
+
+.powered-by {
+    position: absolute; right: 250px; top: 20px;
+    font-size: 24px; color: #FFFFFF;
+}
+
+.vercel-logo img {
+    width: 102px; height: 32px;
+    position: absolute; right: 132px; top: 20px;
+}
+
+/* Responsive footer adjustments */
+@media (max-width: 1200px) {
+    footer {
+        left: 5px;
+        width: calc(100% - 10px);
+        padding: 0 28px;
+    }
+    .footer-logo img { left: 18px; width: 130px; }
+    .copyright { left: 18px; font-size: 18px; top: 12px; }
+    .follow-text { left: auto; right: 18px; top: 12px; font-size: 20px; }
+    .social-icons { left: 50%; transform: translateX(-50%); top: 46px; }
+}
+
+@media (max-width: 768px) {
+    footer {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 94%;
+        height: auto;
+        padding: 12px 18px;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* make previously absolutely-positioned children flow inside the footer */
+    .footer-logo, .copyright, .follow-text, .social-icons, .powered-by, .vercel-logo {
+        position: static !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
+        text-align: center;
+    }
+
+    .footer-logo img { width: 120px; height: auto; margin-bottom: 6px; }
+    .copyright { font-size: 14px; }
+    .follow-text { font-size: 18px; font-weight: 700; }
+
+    .social-icons { display:flex; gap:10px; justify-content:center; }
+    .social-icons .btn { height: 40px; width: 40px; }
+    .social-icons .btn .icon img { width: 20px; height: 20px; margin-top: 10px; }
+    /* hide span labels on very small footers to save space */
+    .social-icons .btn span { display: none; }
+
+    .powered-by, .vercel-logo { margin-top: 6px; }
+    .vercel-logo img { width: 80px; height: auto; }
+}
+
+@media (max-width: 420px) {
+    footer { width: 96%; padding: 10px 12px; border-radius: 18px; }
+    .follow-text { font-size: 16px; }
+    .copyright { font-size: 12px; }
+    .social-icons .btn { height: 36px; width: 36px; }
+}
+
+/* Make footer fonts responsive relative to root when needed */
+@media (max-width: 1024px) {
+    .social-icons .btn span { font-size: 18px; }
+}
